@@ -1,0 +1,63 @@
+# -----------------------------------------------------------------------------------------------
+#
+# All the configurations associated with the ai-intro project.
+#
+# NOTE:
+# Keep this file stored at the project's root directory
+# -----------------------------------------------------------------------------------------------
+
+paths:
+  data_dir: /home/chandar/data
+  results_dir: /home/chandar/results
+
+current_task: tree-classification
+
+mnist-classification:
+  data: /home/devops/kayal/data/mnist
+  results: /home/devops/kayal/results/mnist
+  num_channels: 1
+  num_classes: 10
+  image_size: 28
+  nz: 100
+  ngf: 56 # number of generator feature maps
+  ndf: 56 # number of discriminator feature maps
+
+tree-classification:
+  data: /home/devops/kayal/data/trees
+  results: /home/devops/kayal/results/trees
+  num_channels: 3
+  num_classes: 2
+  image_size: 64
+  nz: 100
+  ngf: 64 # number of generator feature maps
+  ndf: 64 # number of discriminator feature maps
+
+bird-call-classification:
+  data: /home/devops/kayal/data/bird-calls
+  results: /home/devops/kayal/results/bird-calls
+  num_channels: 1
+  num_classes: 2
+
+vision-transformer:
+  vit-results: vit-trees-full-ft # vit-trees-tl / vit-trees-full-ft
+  vit-finetuning-type: 1 # 0 / 1
+
+plot_style: 
+  # For latex-quality, i.e., publication quality legends and labels on graphs.
+  text.usetex: True  # <----------------- you must have installed LaTeX on your system. Else set it to False
+  
+  # configure fonts
+  font.size : 12             # default font size
+  font.family : serif
+  legend.fontsize: 10
+  axes.labelsize: 12
+  axes.titlesize : 14
+  xtick.labelsize : 10
+  ytick.labelsize : 10
+  
+  # configure figure
+  figure.dpi: 144
+  figure.figsize: 10,5
+  figure.titlesize: 14
+
+device: cpu
